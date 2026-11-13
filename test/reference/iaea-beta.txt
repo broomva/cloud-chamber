@@ -1,0 +1,6 @@
+# IAEA Live Chart of Nuclides (ENSDF evaluated decay radiations), beta-minus. Fetched 2026-11-12 from
+# https://www-nds.iaea.org/relnsd/v1/data?fields=decay_rads&nuclides=90sr&rad_types=bm and ...nuclides=90y...
+# Only the dominant branch of each nuclide is kept (Sr-90: 100%; Y-90 ground state: 99.9885%).
+# columns: Z of the daughter | end-point energy (keV) | mean energy (keV) | uncertainty of the mean (keV)
+39 545.9 195.7 1.4
+40 2278.5 932.4 1.6

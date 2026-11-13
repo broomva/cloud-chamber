@@ -1,0 +1,33 @@
+{
+  "name": "cloud-chamber",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/broomva/cloud-chamber.git" },
+  "keywords": ["physics", "simulation", "cloud-chamber", "radiation", "webgl2", "nucleation"],
+  "type": "module",
+  "description": "A diffusion cloud chamber simulated from physics: vapor thermodynamics, nucleation, particle transport and droplet growth, drawn in WebGL2.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "bun test --timeout 60000",
+    "test:seeds": "for s in 1 2 3 4 5 6 7 8; do CHAMBER_SEED_SHIFT=$s bun test --timeout 60000 || exit 1; done",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src test tools demo",
+    "lint:fix": "biome check --write src test tools demo",
+    "render": "bun run tools/render.ts",
+    "demo": "bun run tools/build-demo.ts",
+    "check-demo": "bun run tools/check-demo.ts",
+    "report": "bun run tools/report.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.14",
+    "@types/bun": "1.3.14",
+    "playwright-core": "1.63.0",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "bun": ">=1.3.0"
+  }
+}
